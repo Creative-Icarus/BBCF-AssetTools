@@ -1,0 +1,66 @@
+﻿# BlazBlue Centralfiction - MUA Format
+
+## Overview
+
+The `.MUA` format stores:
+
+- Skeletons
+- Bones
+- Meshes
+- Materials
+- Vertex Buffers
+- Face Buffers
+- Strings
+- Default Animations
+
+Optional animations are stored in `.MMOT` files.
+
+---
+
+## Section Table
+
+| ID | Section | Status |
+|----|---------|--------|
+| 0 | Skeleton | ✅ Parsed |
+| 1 | Bone | ✅ Parsed |
+| 2 | Mesh | ✅ Parsed |
+| 3 | Mesh Part | ✅ Parsed |
+| 4 | Material | ✅ Parsed |
+| 5 | Texture Assignment | ✅ Parsed |
+| 6 | Texture Name | ✅ Parsed |
+| 7 | Unknown | ❓ |
+| 8 | Animation List | ✅ Parsed |
+| 9 | Animation Data | ✅ Parsed |
+| 10 | Unknown | ❓ |
+| 11 | Unknown | ❓ |
+| 12 | Mesh-Part Table | ✅ Parsed |
+| 13 | Vertex Buffer | ✅ Parsed |
+| 14 | Face Buffer | ✅ Parsed |
+| 15 | String Info | ✅ Parsed |
+| 16 | Strings | ✅ Parsed |
+
+---
+
+## Vertex Layout
+
+| Offset | Type | Description |
+|--------:|------|-------------|
+| 0x00 | float3 | Position |
+| 0x0C | int3 | Normal |
+| 0x18 | int3 | Tangent |
+| 0x24 | float2 | UV |
+| 0x34 | RGBA8 | Vertex Color |
+| 0x38 | float3 | Bone Indices |
+| 0x44 | float3 | Bone Weights |
+
+Stride: **0x50 (80 bytes)**
+
+---
+
+## Current Goals
+
+- [x] Import MUA
+- [x] Import MMOT
+- [ ] Export MUA
+- [ ] Blender Add-on
+- [ ] PAC Repacker
