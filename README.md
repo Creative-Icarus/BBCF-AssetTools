@@ -1,20 +1,34 @@
 # BBCF Stage Tools
 
-A toolkit for BlazBlue Centralfiction asset editing.
+A toolkit for modding **BlazBlue: Centralfiction**.
 
 ## Goals
 
-- Import MUA
-- Export MUA
-- PAC support
-- MMOT support
+- Import MUA models
+- Export MUA models
+- Import/Export MMOT animations
 - Blender workflow
+- PAC extraction/repacking
 
-## Current Status
+## Current Progress
 
-- [x] Import MUA
-- [x] Import MMOT
-- [ ] Export MUA
-- [ ] Blender Addon
+- [ ] MUA Import (Noesis)
+- [ ] MMOT Import
+- [ ] MUA Export
+- [ ] Blender Add-on
+- [ ] PAC Repacker
 
-Based on the Noesis MUA plugin by tl000000 and tools from the GeoArcSysAIOCLITool project. Extended for BlazBlue: Centralfiction stage editing and modding.
+## Roadmap
+
+### Phase 1
+- Clean up importer
+- Document MUA format
+
+### Phase 2
+- FBX workflow
+
+### Phase 3
+- MUA exporter
+
+### Phase 4
+- Blender add-on
